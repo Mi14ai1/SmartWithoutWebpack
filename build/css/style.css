@@ -452,7 +452,7 @@ template {
   scroll-behavior: smooth;
 }
 
-.page__body {
+.page__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1980,8 +1980,8 @@ template {
   }
 
   .about {
-    padding-top: 17px;
-    padding-bottom: 71px;
+    padding-top: 19px;
+    padding-bottom: 69px;
   }
 
   .about__year {

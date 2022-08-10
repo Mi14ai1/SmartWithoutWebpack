@@ -5,6 +5,7 @@ import {
   closeModalButton
 } from '../data.js';
 import {maskHandler} from '../inputmask.js';
+import {getFormData} from '../formdata.js';
 
 const inputName = modal.querySelector('input[name="name"]');
 const header = body.querySelector('.header__container');
@@ -29,6 +30,7 @@ const modalHandler = (evt) => {
 
 const modalSubmitHandler = (evt) => {
   evt.preventDefault();
+  getFormData(modalForm);
   modalForm.submit();
   closeModal();
 

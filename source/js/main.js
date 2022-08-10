@@ -24,6 +24,7 @@ import {
 
 
 import {maskHandler} from '../js/modules/inputmask.js';
+import {getFormData} from '../js/modules/formdata.js';
 
 const hiddenText = aboutText.querySelector('.about-text--hidden');
 const mobileHiddenText = aboutText.querySelector('.about-text__mobile-hidden');
@@ -60,6 +61,7 @@ if (WIDEVIEWPORT <= body.clientWidth) {
 
 mainForm.addEventListener('submit', (evt)=>{
   evt.preventDefault();
+  getFormData(mainForm);
   mainForm.submit();
   mainForm.reset();
 });

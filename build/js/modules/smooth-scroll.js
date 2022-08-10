@@ -1,5 +1,3 @@
-document.querySelector('.page').classList.remove('page--smooth-scroll');
-
 const navLinks = document.querySelectorAll('a[href^="#"]');
 
 navLinks.forEach((element) => {

@@ -448,7 +448,7 @@ template {
   top: 0;
 }
 
-.page {
+.page--smooth-scroll {
   scroll-behavior: smooth;
 }
 

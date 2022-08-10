@@ -1,3 +1,4 @@
+import '../js/modules/smooth-scroll.js';
 import '../js/modules/data.js';
 import '../js/modules/modals/modal.js';
 import '../js/modules/accordion.js';

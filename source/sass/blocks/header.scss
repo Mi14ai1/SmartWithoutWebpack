@@ -1,10 +1,18 @@
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100vw;
+  width: 100%;
   background: $black-perl-top-bottom;
   z-index: 10;
+  margin-bottom: -120px;
+
+  @media #{$middle-vp} {
+    margin-bottom: -100px;
+  }
+
+  @media #{$narrow-vp} {
+    margin-bottom: -70px;
+  }
 }
 
 .header__container {

@@ -432,7 +432,7 @@ template {
 }
 
 .wrapper--header {
-  padding: 30px 98px 35px 21px;
+  padding: 30px 90px 35px 30px;
 }
 
 .wrapper--header-show-modal {
@@ -493,14 +493,14 @@ template {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100vw;
+  width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   z-index: 10;
+  margin-bottom: -120px;
 }
 
 .header__container {
@@ -1350,6 +1350,10 @@ template {
   color: #ffffff;
 }
 
+.feedback-form label[for="question"] {
+  grid-column: 1 / -1;
+}
+
 .feedback-form__convention {
   position: relative;
   display: block;
@@ -1380,11 +1384,12 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   grid-column: 1/-1;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
   resize: none;
   padding: 23px 15px;
   height: 155px;
   overflow-y: auto;
+  width: 100%;
 }
 
 .feedback-form button {
@@ -1758,6 +1763,10 @@ template {
     padding: 15px 29px 20px 26px;
   }
 
+  .header {
+    margin-bottom: -70px;
+  }
+
   .header__contacts {
     padding: 0;
     margin-top: -3px;
@@ -1870,8 +1879,8 @@ template {
   }
 
   .top-banner {
-    min-height: 560px;
-    padding-top: 150px;
+    min-height: 556px;
+    padding-top: 148px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
     background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
@@ -1972,7 +1981,7 @@ template {
 
   .about {
     padding-top: 17px;
-    padding-bottom: 69px;
+    padding-bottom: 71px;
   }
 
   .about__year {
@@ -2090,7 +2099,7 @@ template {
 
   .feedback-form textarea {
     min-height: 180px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   .feedback-form button {
@@ -2127,6 +2136,10 @@ template {
 
   .wrapper--header {
     padding: 20px 64px 25px 50px;
+  }
+
+  .header {
+    margin-bottom: -100px;
   }
 
   .header__contacts {
@@ -2354,5 +2367,17 @@ template {
 
   .feedback-form {
     margin: 0 auto;
+  }
+}
+
+@media (max-height: 756px) {
+  .modal {
+    padding-top: 0;
+    overflow-y: auto;
+  }
+
+  .modal__feedback {
+    position: relative;
+    margin: 146px auto 0;
   }
 }

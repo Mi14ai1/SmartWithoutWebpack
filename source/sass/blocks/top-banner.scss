@@ -22,8 +22,8 @@
   }
 
   @media #{$narrow-vp} {
-    min-height: 560px;
-    padding-top: 150px;
+    min-height: 556px;
+    padding-top: 148px;
     background: $top-banner-gradient, no-repeat center / cover url("../img/main/topbackground-s.jpg"), $color-black-perl;
 
     @media (min-resolution: $retina-dppx) {

@@ -7,6 +7,11 @@
   background: $color-modal-background;
   z-index: 11;
   padding-top: 146px;
+
+  @media (max-height: 756px) {
+    padding-top: 0;
+    overflow-y: auto;
+  }
 }
 
 .modal__feedback {
@@ -49,6 +54,11 @@
   .modal__feedback-convention {
     padding-top: 0;
     padding-left: 34px;
+  }
+
+  @media (max-height: 756px) {
+    position: relative;
+    margin: 146px auto 0;
   }
 }
 

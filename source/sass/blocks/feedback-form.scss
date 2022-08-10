@@ -103,6 +103,10 @@
   color: $color-default-white;
 }
 
+.feedback-form label[for="question"] {
+  grid-column: 1 / -1;
+}
+
 .feedback-form__convention {
   position: relative;
   display: block;
@@ -141,11 +145,12 @@
 .feedback-form textarea {
   box-sizing: border-box;
   grid-column: 1/-1;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
   resize: none;
   padding: 23px 15px;
   height: 155px;
   overflow-y: auto;
+  width: 100%;
 
   @media #{$middle-vp} {
     padding-top: 30px;
@@ -153,7 +158,7 @@
 
   @media #{$narrow-vp} {
     min-height: 180px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 }
 

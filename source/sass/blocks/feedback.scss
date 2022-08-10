@@ -1,0 +1,36 @@
+.feedback {
+  position: relative;
+  min-height: 840px;
+  background: $color-deep-sky-blue;
+  z-index: 0;
+
+  @media #{$wide-vp} {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $color-transparent-black-perl;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 86vw + 7px), 0 100%);
+      z-index: -1;
+    }
+  }
+
+  @media #{$middle-vp} {
+    min-height: 580px;
+  }
+
+  @media #{$narrow-vp} {
+    min-height: 750px;
+  }
+}
+
+.feedback img {
+  position: absolute;
+  top: 246px;
+  left: 350px;
+
+  @media #{$not-wide-vp} {
+    display: none;
+  }
+}

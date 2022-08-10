@@ -1,0 +1,41 @@
+.contact {
+  padding: 8px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: initial;
+    width: 21px;
+    height: 20px;
+    background: $color-deep-sky-blue;
+    margin-right: 10px;
+
+    @media #{$not-wide-vp} {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--email::before {
+    mask: no-repeat center / cover url("../img/svg/contacts-sprite.svg#email");
+  }
+
+  &--phone::before {
+    mask: no-repeat center / cover url("../img/svg/contacts-sprite.svg#phone");
+  }
+
+  &--phone {
+    transform: translateX(7px);
+  }
+}
+
+.contact span {
+  display: inline-block;
+  vertical-align: super;
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-alice-blue;
+  text-decoration: none;
+}

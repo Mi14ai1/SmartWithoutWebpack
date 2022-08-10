@@ -1,0 +1,95 @@
+.about {
+  position: relative;
+  padding: 61px 0 100px;
+
+  @media #{$middle-vp} {
+    padding: 30px 0 80px;
+  }
+
+  @media #{$narrow-vp} {
+    padding-top: 17px;
+    padding-bottom: 69px;
+  }
+}
+
+.about__grid {
+  position: relative;
+  min-height: 320px;
+
+  @media #{$wide-vp} {
+    padding-left: 280px;
+  }
+}
+
+.about__year {
+  position: absolute;
+  top: 53px;
+  left: -38px;
+
+  @media #{$middle-vp} {
+    top: 57px;
+    left: -21px;
+  }
+
+  @media #{$narrow-vp} {
+    position: absolute;
+    transform: scale(0);
+    left: 0;
+    top: 0;
+  }
+}
+
+.about h2 {
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $color-black-perl;
+  margin: 0 0 12px;
+
+  @media #{$narrow-vp} {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 11px;
+  }
+}
+
+.about__button {
+  font-family: $ff-roboto-condensed;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-deep-sky-blue;
+  letter-spacing: 0.8px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px $color-deep-sky-blue;
+  padding: 10px;
+  min-height: 45px;
+  width: 180px;
+
+  @media #{$middle-vp} {
+    display: block;
+    margin: 0 313px 0 auto;
+  }
+
+  @media #{$narrow-vp} {
+    padding: 5px;
+    width: 160px;
+    min-height: 35px;
+  }
+}
+
+.about__text-container {
+  margin-bottom: 15px;
+
+  @media #{$wide-vp} {
+    margin-bottom: 39px;
+  }
+
+  @media #{$middle-vp} {
+    max-width: 495px;
+    margin-left: auto;
+    margin-bottom: -3px;
+  }
+}

@@ -1,0 +1,27 @@
+.social {
+  width: 150px;
+}
+
+.social a {
+  display: block;
+  line-height: 0;
+  padding: 5px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40px);
+  gap: 15px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

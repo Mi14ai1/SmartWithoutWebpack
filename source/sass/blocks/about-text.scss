@@ -1,0 +1,21 @@
+.about-text p {
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $color-black-perl;
+  margin: 0 0 16px;
+
+  @media #{$wide-vp} {
+    margin-bottom: 21px;
+  }
+
+  @media #{$narrow-vp} {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  @media #{$middle-vp} {
+    margin-bottom: 19px;
+  }
+}

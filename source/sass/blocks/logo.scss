@@ -1,0 +1,39 @@
+.logo {
+  display: grid;
+  grid-template-columns: min-content max-content;
+}
+
+.logo span {
+  display: block;
+
+  font-family: $ff-roboto;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: $color-logo-text-second;
+
+  margin-top: 1px;
+}
+
+.logo p {
+  font-family: $ff-roboto-condensed;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 700;
+  color: $color-logo-text-main;
+  margin: 0;
+}
+
+.logo__words {
+  padding-top: 5px;
+  margin-left: 15px;
+
+  &--modile-hide {
+    @media #{$narrow-vp} {
+      position: absolute;
+      transform: scale(0);
+      left: 0;
+      top: 0;
+    }
+  }
+}

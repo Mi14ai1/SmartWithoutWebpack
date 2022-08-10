@@ -1,0 +1,32 @@
+.about-year {
+  font-family: $ff-roboto-condensed;
+  font-size: 156px;
+  line-height: 220px;
+  font-weight: 700;
+  color: transparent;
+  margin: 0;
+  width: min-content;
+  transform: rotate(-90deg);
+
+  @media #{$wide-vp} {
+    background: no-repeat center / auto auto url("../img/yearbackground-l.jpg");
+    background-clip: text;
+
+    @media (min-resolution: $retina-dppx) {
+      background: no-repeat center / auto 54% url("../img/yearbackground-l@2x.jpg");
+
+      background-clip: text;
+    }
+  }
+
+  @media #{$middle-vp} {
+    background: no-repeat center / auto auto url("../img/yearbackground-l.jpg");
+    background-clip: text;
+
+    @media (min-resolution: $retina-dppx) {
+      background: no-repeat center / auto 52.5% url("../img/yearbackground-l@2x.jpg");
+
+      background-clip: text;
+    }
+  }
+}

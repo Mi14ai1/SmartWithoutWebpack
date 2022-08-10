@@ -1,0 +1,116 @@
+.accordion {
+  align-items: flex-start;
+
+  @media #{$wide-vp} {
+    padding-left: 20px;
+  }
+
+  @media #{$narrow-vp} {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.accordion__control {
+  position: relative;
+  font-family: $ff-roboto-condensed;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: start;
+  color: $color-default-white;
+  min-height: 61px;
+  width: 100%;
+  padding: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(-100vw - 25px);
+    width: 100vw;
+    height: 1px;
+    background: $color-accordion-control;
+    box-shadow: 100vw 0 0 0 $color-accordion-control;
+    top: 0;
+  }
+
+  .accordion__control-mark::before {
+    opacity: 0;
+  }
+
+  @media #{$not-narrow-vp} {
+    display: none;
+  }
+}
+
+.accordion__section {
+  @media #{$narrow-vp} {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(-100vw - 25px);
+      width: 100vw;
+      height: 1px;
+      background: $color-accordion-control;
+      box-shadow: 100vw 0 0 0 $color-accordion-control;
+      bottom: 0;
+    }
+  }
+}
+
+.accordion__control-mark {
+  position: relative;
+  display: block;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background: $color-accordion-control-mark;
+    right: 1px;
+    top: 5px;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+
+.accordion__control--hide-section {
+  margin-bottom: -1px;
+
+  .accordion__control-mark::before {
+    opacity: 1;
+  }
+}
+
+.accordion__control--hide-section:last-of-type {
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(-100vw - 25px);
+    width: 100vw;
+    height: 1px;
+    background: $color-accordion-control;
+    box-shadow: 100vw 0 0 0 $color-accordion-control;
+    bottom: 0;
+  }
+}
+
+.accordion__control--hide-section + .accordion__section {
+  @media #{$narrow-vp} {
+    position: absolute;
+    transform: scale(0);
+    top: 0;
+    left: 0;
+  }
+}

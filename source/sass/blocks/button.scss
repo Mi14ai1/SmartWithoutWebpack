@@ -1,0 +1,18 @@
+.button {
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 2px $color-default-white;
+  }
+}

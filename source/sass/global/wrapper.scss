@@ -1,0 +1,59 @@
+.wrapper {
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media #{$middle-vp} {
+    padding: 0 50px;
+  }
+
+  @media #{$narrow-vp} {
+    padding: 0 25px;
+  }
+
+  &--advantages {
+    padding: 0 28px 0 29px;
+
+    @media #{$middle-vp} {
+      padding: 0 49px;
+    }
+
+    @media #{$narrow-vp} {
+      padding: 0 25px;
+    }
+  }
+
+  &--services {
+    @media #{$wide-vp} {
+      padding: 0 30px;
+    }
+  }
+
+  &--feedback {
+    padding: 165px 40px 20px;
+
+    @media #{$middle-vp} {
+      padding: 45px 50px 20px;
+    }
+
+    @media #{$narrow-vp} {
+      padding: 47px 25px 20px;
+    }
+  }
+
+  &--header {
+    padding: 30px 98px 35px 21px;
+
+    @media #{$middle-vp} {
+      padding: 20px 64px 25px 50px;
+    }
+
+    @media #{$narrow-vp} {
+      padding: 15px 29px 20px 26px;
+    }
+  }
+
+  &--header-show-modal {
+    padding: 30px 90px 35px 30px;
+  }
+}

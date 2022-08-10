@@ -1,0 +1,15 @@
+.callback-button {
+  font-family: $ff-roboto-condensed;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $color-alice-blue-second;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  min-height: 40px;
+  max-width: 160px;
+  width: 100%;
+  padding: 7px 15px 9px;
+  border-radius: 3px;
+  border: solid 1px $color-alice-blue-second;
+}

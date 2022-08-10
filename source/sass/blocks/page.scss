@@ -1,0 +1,14 @@
+.page {
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page__main {
+  flex-grow: 1;
+  flex-shrink: 0;
+}

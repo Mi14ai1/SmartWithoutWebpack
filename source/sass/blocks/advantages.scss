@@ -1,0 +1,31 @@
+.advantages {
+  padding: 119px 0 57px;
+
+  @media #{$middle-vp} {
+    padding: 80px 0 44px;
+  }
+
+  @media #{$narrow-vp} {
+    padding-top: 49px;
+    padding-bottom: 30px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 29px;
+  column-gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media #{$middle-vp} {
+    column-gap: 26px;
+  }
+
+  @media #{$narrow-vp} {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

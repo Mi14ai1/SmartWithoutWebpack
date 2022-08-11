@@ -33,12 +33,17 @@ const modalSubmitHandler = (evt) => {
   getFormData(modalForm);
   modalForm.submit();
   closeModal();
-
 };
 
+const escUpHandler = (evt)=> {
+  if (evt.key === 'Escape') {
+    closeModal();
+  }
+};
 
 const showModal = () => {
   inputName.focus();
+  document.addEventListener('keyup', escUpHandler);
   modal.classList.remove('visually-hidden');
   header.classList.add('wrapper--header-show-modal');
   body.style.overflow = 'hidden';
@@ -54,6 +59,7 @@ const closeModal = () => {
   modalForm.removeEventListener('input', modalFormTelHandler);
   modal.removeEventListener('click', modalHandler);
   modalForm.removeEventListener('submit', modalSubmitHandler);
+  document.removeEventListener('keyup', escUpHandler);
 };
 
 export {

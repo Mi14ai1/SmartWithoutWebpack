@@ -1157,9 +1157,7 @@ template {
 }
 
 .services__item {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 
 .services-card {
@@ -1167,7 +1165,8 @@ template {
   box-sizing: border-box;
   position: relative;
   min-height: 650px;
-  min-width: 350px;
+  width: 100%;
+  height: 100%;
   padding: 47px 40px 80px;
 }
 
@@ -1660,6 +1659,10 @@ template {
     row-gap: 20px;
   }
 
+  .services-card {
+    max-width: 350px;
+  }
+
   .feedback::before {
     content: "";
     position: absolute;
@@ -1738,10 +1741,6 @@ template {
 
   .advantages-card p {
     margin-bottom: 0;
-  }
-
-  .services__item {
-    width: 100%;
   }
 
   .services-card__button {
@@ -2054,7 +2053,7 @@ template {
   }
 
   .services-card {
-    min-height: 350px;
+    min-height: 250px;
     padding: 26px 30px 60px;
   }
 
@@ -2319,7 +2318,7 @@ template {
 
   .services-card {
     min-height: 250px;
-    min-width: 670px;
+    max-width: 100%;
     padding: 37px 45px 80px;
   }
 

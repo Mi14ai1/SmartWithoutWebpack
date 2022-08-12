@@ -35,6 +35,7 @@
 .top-banner__grid {
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 
   @media #{$wide-vp} {
     padding-left: 155px;

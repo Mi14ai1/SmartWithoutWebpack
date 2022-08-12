@@ -1163,7 +1163,12 @@ template {
 }
 
 .services-card {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
+  min-height: 650px;
+  min-width: 350px;
+  padding: 47px 40px 80px;
 }
 
 .services-card::before {
@@ -1174,14 +1179,13 @@ template {
   width: 100%;
   height: 100%;
   background: rgba(4, 24, 39, 0.5);
+  z-index: 2;
 }
 
 .services-card h3 {
-  position: absolute;
+  position: relative;
   display: inline-block;
   vertical-align: initial;
-  top: 47px;
-  left: 40px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 20px;
   line-height: 30px;
@@ -1189,6 +1193,7 @@ template {
   color: #ffffff;
   margin: 0;
   max-width: 170px;
+  z-index: 4;
 }
 
 .services-card__button {
@@ -1199,6 +1204,7 @@ template {
   height: 60px;
   border-radius: 3px 0 0 0;
   background-color: #00b2ff;
+  z-index: 4;
 }
 
 .services-card__button::before {
@@ -1219,6 +1225,10 @@ template {
 }
 
 .services-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   display: inline-block;
   vertical-align: initial;
   width: 100%;
@@ -2043,11 +2053,14 @@ template {
     gap: 30px;
   }
 
+  .services-card {
+    min-height: 350px;
+    padding: 26px 30px 60px;
+  }
+
   .services-card h3 {
     font-size: 18px;
     line-height: 30px;
-    top: 26px;
-    left: 30px;
     max-width: 134px;
   }
 
@@ -2304,9 +2317,13 @@ template {
     gap: 30px;
   }
 
+  .services-card {
+    min-height: 250px;
+    min-width: 670px;
+    padding: 37px 45px 80px;
+  }
+
   .services-card h3 {
-    top: 37px;
-    left: 45px;
     max-width: 148px;
   }
 

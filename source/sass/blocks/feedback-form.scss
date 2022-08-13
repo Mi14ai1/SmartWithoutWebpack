@@ -32,6 +32,7 @@
   }
 
   @media #{$narrow-vp} {
+    max-width: 330px;
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 7px;
@@ -58,6 +59,7 @@
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 34px;
+    max-width: 270px;
   }
 }
 

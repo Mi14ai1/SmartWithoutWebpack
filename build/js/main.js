@@ -25,6 +25,7 @@ import {
 
 import {maskHandler} from '../js/modules/inputmask.js';
 import {getFormData} from '../js/modules/formdata.js';
+import {adaptCard} from './modules/adaptive.js';
 
 const hiddenText = aboutText.querySelector('.about-text--hidden');
 const mobileHiddenText = aboutText.querySelector('.about-text__mobile-hidden');
@@ -35,20 +36,13 @@ const mainFormTel = mainForm.querySelector('input[type="tel"]');
 hiddenText.classList.add('visually-hidden');
 aboutButton.classList.toggle('visually-hidden');
 
+adaptCard();
 
 if (MOBILEVIEWPORT > body.clientWidth) {
   if (!mobileHiddenText.classList.contains('visually-hidden')) {
     mobileHiddenText.classList.add('visually-hidden');
   }
 }
-
-const mainFormTelHandler = (evt) => {
-  evt.preventDefault();
-  maskHandler(evt.target);
-};
-
-mainFormTel.addEventListener('input', mainFormTelHandler);
-
 
 const callButtonHandler = (evt) => {
   evt.preventDefault();
@@ -58,6 +52,14 @@ const callButtonHandler = (evt) => {
 if (WIDEVIEWPORT <= body.clientWidth) {
   callButton.addEventListener('click', callButtonHandler);
 }
+
+
+const mainFormTelHandler = (evt) => {
+  evt.preventDefault();
+  maskHandler(evt.target);
+};
+
+mainFormTel.addEventListener('input', mainFormTelHandler);
 
 mainForm.addEventListener('submit', (evt)=>{
   evt.preventDefault();
@@ -77,6 +79,9 @@ makeAccordion();
 
 window.addEventListener('resize', ()=> {
   const currentViewport = body.clientWidth;
+
+  adaptCard();
+
   if (WIDEVIEWPORT <= currentViewport) {
     callButton.removeEventListener('click', callButtonHandler);
     callButton.addEventListener('click', callButtonHandler);

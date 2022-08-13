@@ -68,16 +68,12 @@
   @media #{$middle-vp} {
     grid-template-columns: 1fr;
     width: 100%;
-    margin: 0 auto;
     gap: 30px;
   }
 
   @media #{$narrow-vp} {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    width: fit-content;
-    margin: 0 auto;
-    max-width: 100%;
-    justify-items: center;
+    width: 100%;
     gap: 30px;
   }
 }

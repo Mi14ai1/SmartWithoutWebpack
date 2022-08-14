@@ -1191,7 +1191,7 @@ template {
   margin: 0;
   max-width: 170px;
   z-index: 4;
-  height: 90px;
+  height: 180px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #041827;

@@ -1912,7 +1912,7 @@ template {
   }
 
   .top-banner {
-    min-height: 556px;
+    min-height: 558px;
     padding-top: 148px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
     background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
@@ -1953,7 +1953,7 @@ template {
 
   .advantages {
     padding-top: 49px;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .advantages__list {

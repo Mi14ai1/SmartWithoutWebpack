@@ -2,22 +2,17 @@ import {
   body,
   modal,
   modalForm,
-  closeModalButton
+  closeModalButton,
+  MAXTELLENGTH
 } from '../data.js';
-import {maskHandler} from '../inputmask.js';
 import {getFormData} from '../formdata.js';
 
-const inputName = modal.querySelector('input[name="name"]');
 const header = body.querySelector('.header__container');
+const inputName = modal.querySelector('input[name="name"]');
 
 const modalFormTel = modalForm.querySelector('input[type="tel"]');
 
-const modalFormTelHandler = (evt) => {
-  evt.preventDefault();
-  maskHandler(evt.target);
-};
-
-modalFormTel.addEventListener('input', modalFormTelHandler);
+modalFormTel.maxLength = MAXTELLENGTH;
 
 const modalHandler = (evt) => {
   evt.stopPropagation();
@@ -56,7 +51,6 @@ const closeModal = () => {
   body.style.overflow = 'initial';
   header.classList.remove('wrapper--header-show-modal');
   modalForm.reset();
-  modalForm.removeEventListener('input', modalFormTelHandler);
   modal.removeEventListener('click', modalHandler);
   modalForm.removeEventListener('submit', modalSubmitHandler);
   document.removeEventListener('keyup', escUpHandler);

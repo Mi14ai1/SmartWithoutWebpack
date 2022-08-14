@@ -1,6 +1,9 @@
 .about {
   position: relative;
-  padding: 61px 0 100px;
+
+  @media #{$wide-vp} {
+    padding: 61px 50px 100px;
+  }
 
   @media #{$middle-vp} {
     padding: 30px 0 80px;

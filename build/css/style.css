@@ -1050,7 +1050,6 @@ template {
 
 .about {
   position: relative;
-  padding: 61px 0 100px;
 }
 
 .about__grid {
@@ -1649,6 +1648,10 @@ template {
   .advantages-card--time {
     padding-top: 41px;
     padding-left: 46px;
+  }
+
+  .about {
+    padding: 61px 50px 100px;
   }
 
   .about__grid {

@@ -1,6 +1,7 @@
 import '../js/modules/data.js';
 import '../js/modules/modals/modal.js';
 import '../js/modules/accordion.js';
+import '../js/modules/phonemask.js';
 
 import {
   showModal
@@ -22,8 +23,6 @@ import {
   body
 } from '../js/modules/data.js';
 
-
-import {maskHandler} from '../js/modules/inputmask.js';
 import {getFormData} from '../js/modules/formdata.js';
 import {adaptCard} from './modules/adaptive.js';
 
@@ -31,7 +30,6 @@ const hiddenText = aboutText.querySelector('.about-text--hidden');
 const mobileHiddenText = aboutText.querySelector('.about-text__mobile-hidden');
 const aboutOpenButtonText = aboutButton.querySelector('.about__open');
 const aboutCloseButtonText = aboutButton.querySelector('.about__close');
-const mainFormTel = mainForm.querySelector('input[type="tel"]');
 
 hiddenText.classList.add('visually-hidden');
 aboutButton.classList.toggle('visually-hidden');
@@ -52,14 +50,6 @@ const callButtonHandler = (evt) => {
 if (WIDEVIEWPORT <= body.clientWidth) {
   callButton.addEventListener('click', callButtonHandler);
 }
-
-
-const mainFormTelHandler = (evt) => {
-  evt.preventDefault();
-  maskHandler(evt.target);
-};
-
-mainFormTel.addEventListener('input', mainFormTelHandler);
 
 mainForm.addEventListener('submit', (evt)=>{
   evt.preventDefault();
@@ -99,3 +89,4 @@ window.addEventListener('resize', ()=> {
   makeAccordion();
 
 });
+

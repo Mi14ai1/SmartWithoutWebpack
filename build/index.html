@@ -301,7 +301,7 @@
                   <span class="visually-hidden">Имя</span>
                 </label>
                 <label for="phone">
-                  <input id="phone" name="phone" type="tel" placeholder="Телефон" max="14" title="Введите номер телефона 10 цифр" required/>
+                  <input data-tel-input id="phone" name="phone" type="tel" placeholder="Телефон" pattern="(\+7\([0-9]{3}\)[0-9]{7})|([0-9]{10})" maxlength="10" title="Введите номер телефона 10 цифр" required/>
                   <span class="visually-hidden">Телефон</span>
                 </label>
                 <label for="question">
@@ -410,7 +410,7 @@
               <span class="visually-hidden">Имя</span>
             </label>
             <label for="modal-phone">
-              <input id="modal-phone" name="phone" type="tel" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{7}$" title="Введите номер телефона 10 цифр" required/>
+              <input data-tel-input id="modal-phone"  name="phone" type="tel" placeholder="Телефон" pattern="(\+7\([0-9]{3}\)[0-9]{7})|([0-9]{10})" title="Введите номер телефона 10 цифр" maxlength="10" required/>
               <span class="visually-hidden">Телефон</span>
             </label>
             <label for="modal-question">

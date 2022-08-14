@@ -8,10 +8,11 @@ const MIDDLERATIO = 25 / 67;
 const MOBILERATIO = 25 / 27;
 const WIDERATIO = 13 / 7;
 
+const card = document.querySelector('.services-card');
+const cards = document.querySelectorAll('.services-card');
 
 const adaptCard = () => {
-  const card = document.querySelector('.services-card');
-  const cards = document.querySelectorAll('.services-card');
+
   const bodyWidth = body.clientWidth;
   const viewportWidth = window.screen.width;
   const scrollWidth = viewportWidth - bodyWidth;

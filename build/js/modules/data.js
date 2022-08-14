@@ -2,6 +2,7 @@ const REGION = '+7';
 const HIDESECTION = 'accordion__control--hide-section';
 const MOBILEVIEWPORT = '768';
 const WIDEVIEWPORT = '1024';
+const MAXTELLENGTH = '18';
 
 const body = document.querySelector('body');
 const header = body.querySelector('header');
@@ -38,6 +39,7 @@ export {
   HIDESECTION,
   MOBILEVIEWPORT,
   WIDEVIEWPORT,
+  MAXTELLENGTH,
   accordionControls,
   accordion
 };

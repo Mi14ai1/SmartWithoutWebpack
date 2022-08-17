@@ -24,7 +24,6 @@ import {
 } from '../js/modules/data.js';
 
 import {getFormData} from '../js/modules/formdata.js';
-import {adaptCard} from './modules/adaptive.js';
 
 const hiddenText = aboutText.querySelector('.about-text--hidden');
 const mobileHiddenText = aboutText.querySelector('.about-text__mobile-hidden');
@@ -33,8 +32,6 @@ const aboutCloseButtonText = aboutButton.querySelector('.about__close');
 
 hiddenText.classList.add('visually-hidden');
 aboutButton.classList.toggle('visually-hidden');
-
-adaptCard();
 
 if (MOBILEVIEWPORT > body.clientWidth) {
   if (!mobileHiddenText.classList.contains('visually-hidden')) {
@@ -69,8 +66,6 @@ makeAccordion();
 
 window.addEventListener('resize', ()=> {
   const currentViewport = body.clientWidth;
-
-  adaptCard();
 
   if (WIDEVIEWPORT <= currentViewport) {
     callButton.removeEventListener('click', callButtonHandler);

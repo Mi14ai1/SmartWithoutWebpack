@@ -32,6 +32,10 @@
   &--feedback {
     padding: 165px 40px 20px;
 
+    @media #{$wide-vp} {
+      position: relative;
+    }
+
     @media #{$middle-vp} {
       padding: 45px 50px 20px;
     }

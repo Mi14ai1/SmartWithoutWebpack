@@ -23,8 +23,7 @@
 
   @media #{$narrow-vp} {
     min-height: 250px;
-    height: calc(100vw / 1.28);
-    padding: 26px 30px 60px;
+    padding: 26px 30px 40px;
   }
 
   @media (min-width: 1298px) {

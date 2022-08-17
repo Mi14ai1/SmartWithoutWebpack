@@ -3,6 +3,7 @@ const HIDESECTION = 'accordion__control--hide-section';
 const MOBILEVIEWPORT = '768';
 const WIDEVIEWPORT = '1024';
 const MAXTELLENGTH = '18';
+const INTERECTIVESELECTORS = ['a', 'button', 'input', 'textarea', '[tabindex]'];
 
 const body = document.querySelector('body');
 const header = body.querySelector('header');
@@ -41,5 +42,6 @@ export {
   WIDEVIEWPORT,
   MAXTELLENGTH,
   accordionControls,
-  accordion
+  accordion,
+  INTERECTIVESELECTORS
 };

@@ -55,7 +55,10 @@
   }
 
   @media #{$narrow-vp} {
-    padding-left: 25px;
+    display: grid;
+    grid-template-columns: min-content;
+    justify-content: center;
+    margin-left: -5px;
     margin-bottom: 24px;
   }
 }

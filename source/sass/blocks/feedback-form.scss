@@ -66,6 +66,10 @@
 .feedback-form span {
   display: block;
   width: 200px;
+
+  @media #{$narrow-vp} {
+    width: 100%;
+  }
 }
 
 .feedback-form input,
@@ -188,7 +192,7 @@
   }
 
   @media #{$narrow-vp} {
-    width: 270px;
+    width: 100%;
     margin-bottom: 20px;
   }
 }
@@ -217,7 +221,7 @@
       top: 50%;
       left: 50%;
       transform-origin: left top;
-      transform: rotate(-135deg) translate(calc(-50% + 2px), -50%);
+      transform: rotate(-135deg) translate(0, -3px);
       width: 3px;
       height: 6px;
       border-left: solid 1px $color-default-white;

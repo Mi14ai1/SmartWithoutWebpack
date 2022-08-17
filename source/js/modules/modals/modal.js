@@ -3,9 +3,13 @@ import {
   modal,
   modalForm,
   closeModalButton,
-  MAXTELLENGTH
+  MAXTELLENGTH,
+  INTERECTIVESELECTORS
 } from '../data.js';
 import {getFormData} from '../formdata.js';
+
+const interactiveElements = document.querySelectorAll(INTERECTIVESELECTORS);
+const modalInteractiveElements = modal.querySelectorAll(INTERECTIVESELECTORS);
 
 const header = body.querySelector('.header__container');
 const inputName = modal.querySelector('input[name="name"]');
@@ -44,6 +48,8 @@ const showModal = () => {
   body.style.overflow = 'hidden';
   modal.addEventListener('click', modalHandler);
   modalForm.addEventListener('submit', modalSubmitHandler);
+  interactiveElements.forEach((element) => element.setAttribute('tabindex', '-1'));
+  modalInteractiveElements.forEach((element) => element.setAttribute('tabindex', '1'));
 };
 
 const closeModal = () => {
@@ -54,6 +60,8 @@ const closeModal = () => {
   modal.removeEventListener('click', modalHandler);
   modalForm.removeEventListener('submit', modalSubmitHandler);
   document.removeEventListener('keyup', escUpHandler);
+  interactiveElements.forEach((element) => element.setAttribute('tabindex', '1'));
+  modalInteractiveElements.forEach((element) => element.setAttribute('tabindex', '-1'));
 };
 
 export {

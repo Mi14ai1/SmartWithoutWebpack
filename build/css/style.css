@@ -477,6 +477,10 @@ template {
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button:hover {
@@ -493,8 +497,6 @@ template {
 }
 
 .header {
-  position: sticky;
-  top: 0;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1261,8 +1263,10 @@ template {
 
 .feedback img {
   position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
   top: 246px;
-  left: 350px;
+  left: 30px;
 }
 
 .feedback-form {
@@ -1464,9 +1468,9 @@ template {
   -webkit-transform-origin: left top;
   -ms-transform-origin: left top;
   transform-origin: left top;
-  -webkit-transform: rotate(-135deg) translate(calc(-50% + 2px), -50%);
-  -ms-transform: rotate(-135deg) translate(calc(-50% + 2px), -50%);
-  transform: rotate(-135deg) translate(calc(-50% + 2px), -50%);
+  -webkit-transform: rotate(-135deg) translate(0, -3px);
+  -ms-transform: rotate(-135deg) translate(0, -3px);
+  transform: rotate(-135deg) translate(0, -3px);
   width: 3px;
   height: 6px;
   border-left: solid 1px #ffffff;
@@ -1619,6 +1623,15 @@ template {
     padding: 0 30px;
   }
 
+  .wrapper--feedback {
+    position: relative;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+  }
+
   .navigation {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -1685,8 +1698,8 @@ template {
     width: 100%;
     height: 100%;
     background: rgba(4, 24, 39, 0.5);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 86vw + 7px), 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 86vw + 7px), 0 100%);
+    -webkit-clip-path: polygon(0 0, calc(50% + 12px) 0, calc(50% - 961px) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(50% + 12px) 0, calc(50% - 961px) 100%, 0 100%);
     z-index: -1;
   }
 
@@ -1722,6 +1735,12 @@ template {
   .services-card {
     height: 650px;
     width: 350px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feedback img {
+    left: calc(30px + (100vw - 1200px));
   }
 }
 
@@ -1829,7 +1848,16 @@ template {
   }
 
   .footer__container {
-    padding-left: 25px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: -webkit-min-content;
+    -ms-grid-columns: min-content;
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: -5px;
     margin-bottom: 24px;
   }
 
@@ -2072,8 +2100,7 @@ template {
 
   .services-card {
     min-height: 250px;
-    height: calc(100vw / 1.28);
-    padding: 26px 30px 60px;
+    padding: 26px 30px 40px;
   }
 
   .services-card h3 {
@@ -2110,6 +2137,10 @@ template {
     max-width: 270px;
   }
 
+  .feedback-form span {
+    width: 100%;
+  }
+
   .feedback-form form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2137,7 +2168,7 @@ template {
   }
 
   .feedback-form button {
-    width: 270px;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -2301,12 +2332,11 @@ template {
 
   .about__button {
     display: block;
-    margin: 0 313px 0 auto;
+    margin: 0 auto 0 175px;
   }
 
   .about__text-container {
-    max-width: 495px;
-    margin-left: auto;
+    padding-left: 175px;
     margin-bottom: -3px;
   }
 

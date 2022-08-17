@@ -59,7 +59,7 @@ let onPhoneKeyDown = (e) => {
 
 let onPhoneInput = (e) => {
   e.target.maxLength = 18;
-  e.target.pattern = '.+';
+  e.target.pattern = '.{18}';
 
   let input = e.target;
   let position = input.selectionStart;

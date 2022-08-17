@@ -1,10 +1,13 @@
 .header {
-  position: sticky;
-  top: 0;
   width: 100%;
   background: $black-perl-top-bottom;
   z-index: 10;
   margin-bottom: -120px;
+
+  @media #{$wide-vp} {
+    position: fixed;
+    top: 0;
+  }
 
   @media #{$middle-vp} {
     margin-bottom: -100px;

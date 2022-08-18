@@ -241,6 +241,12 @@
     top: 17px;
   }
 
+
+  @media (max-width: 767px) and (min-width: 442px) {
+    top: 4px;
+  }
+
+
   @media #{$narrow-vp} {
     left: 5px;
     top: 12px;

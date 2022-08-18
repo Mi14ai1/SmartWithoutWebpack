@@ -936,6 +936,10 @@ template {
   max-width: 410px;
   width: 100%;
   min-height: 55px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .top-banner a:hover {
@@ -2440,6 +2444,12 @@ template {
   .services-card {
     width: calc(100vw / 3.7);
     height: calc(100vw / 2);
+  }
+}
+
+@media (max-width: 767px) and (min-width: 442px) {
+  .feedback-form input[type="checkbox"] {
+    top: 4px;
   }
 }
 
